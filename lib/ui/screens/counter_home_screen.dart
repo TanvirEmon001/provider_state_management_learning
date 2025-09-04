@@ -17,8 +17,8 @@ class _CounterHomeScreenState extends State<CounterHomeScreen>{
   Widget build(BuildContext context){
     print("hello");
 
-    final counter = context.watch<CounterProvider>();// this will rebuild the entire widget/
-    // this state management is perfect for small projects where rebuilding isn’t expensive.
+    final counter = context.read<CounterProvider>();// this will rebuild only the widget which i will wrap into Consumer/
+
 
 
 
@@ -30,9 +30,13 @@ class _CounterHomeScreenState extends State<CounterHomeScreen>{
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(counter.count.toString(), style: TextStyle(
-              fontSize: 50
-          ),),
+          Consumer<CounterProvider>(
+            builder: (context, counter, child){
+              return Text("${counter.count}", style: TextStyle(
+                  fontSize: 50
+              ),);
+            },
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 50,
