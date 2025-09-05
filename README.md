@@ -1,16 +1,10 @@
-# counter_provider
+// to do list with provider..........
 
-Counter application with provider state management
 
-## Getting Started
+1. get to do list from user 
+2. add task button
+3. show task in main screen
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+screens:
+    to_do_home_screen.dart
+    add_new_task.dart

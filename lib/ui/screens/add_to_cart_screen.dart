@@ -1,4 +1,4 @@
-import 'package:counter_provider/providers/show_product_screen.dart';
+import 'package:counter_provider/ui/screens/show_product_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
