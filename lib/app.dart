@@ -1,3 +1,4 @@
+import 'package:counter_provider/ui/screens/add_to_cart_screen.dart';
 import 'package:counter_provider/ui/screens/counter_home_screen.dart';
 import 'package:flutter/material.dart';
 class CounterAppProvider extends StatelessWidget{
@@ -6,7 +7,7 @@ class CounterAppProvider extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      home: CounterHomeScreen(),
+      home: AddToCartScreen(),
     );
   }
 

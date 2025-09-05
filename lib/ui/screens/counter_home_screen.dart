@@ -17,7 +17,7 @@ class _CounterHomeScreenState extends State<CounterHomeScreen>{
   Widget build(BuildContext context){
     print("hello");
 
-    final counter = context.read<CounterProvider>();// this will rebuild only the widget which i will wrap into Consumer/
+    final counter = context.read<CounterProvider>();
 
 
 
@@ -31,11 +31,17 @@ class _CounterHomeScreenState extends State<CounterHomeScreen>{
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Consumer<CounterProvider>(
-            builder: (context, counter, child){
+            builder: (_, counter, __){
               return Text("${counter.count}", style: TextStyle(
                   fontSize: 50
               ),);
             },
+          ),
+          Consumer<CounterProvider>(
+            builder: (_, counter, __) => Text(
+              counter.count.isEven ? 'Even ✅' : 'Odd ❌',
+              style: const TextStyle(fontSize: 20),
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
