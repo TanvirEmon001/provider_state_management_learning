@@ -1,3 +1,4 @@
+import 'package:counter_provider/providers/show_product_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +29,10 @@ class _AddToCartScreenState extends State<AddToCartScreen>{
             builder: (context, cart, child){
               return Text(cart.listLength.toString());
             },
-          )
+          ),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ShowProductScreen()));
+          }, icon: Icon(Icons.production_quantity_limits))
         ],
       ),
       body: ListView(
